@@ -36,10 +36,10 @@
                     <label for="ar[location]" class="form-label">Location Name in Arabic</label>
                     <input type="text" name="ar[location]" class="form-control" value="{{ $contactInfo->translate('ar')->location }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[location]" class="form-label">Location Name in English</label>
                     <input type="text" name="en[location]" class="form-control" value="{{ $contactInfo->translate('en')->location }}">
-                </div>
+                </div> --}}
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Save </button>
                 </div>

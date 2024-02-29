@@ -30,10 +30,10 @@
                     <label for="ar" class="form-label">Privacy Me in Arabic</label>
                     <textarea class="form-control" id="ar" name="ar" rows="5" dir="rtl">{{ old('ar') ?? isset($privacy) ? $privacy->ar : '' }}</textarea>
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en" class="form-label">Privacy Me in English</label>
                     <textarea class="form-control" id="en" name="en" rows="5">{{ old('en') ?? isset($privacy) ? $privacy->en : '' }}</textarea>
-                </div>
+                </div> --}}
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Save </button>
                 </div>

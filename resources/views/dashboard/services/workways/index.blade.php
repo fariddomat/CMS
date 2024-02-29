@@ -18,7 +18,7 @@
                     <tr>
                         <th>#</th>
                         <th>Title in Arabic</th>
-                        <th>Title in English</th>
+                        {{-- <th>Title in English</th> --}}
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -28,7 +28,7 @@
                     <tr>
                         <td>{{ $key + 1 }}</td>
                         <td>{{ $work->translate('ar')->title }}</td>
-                        <td>{{ $work->translate('en')->title }}</td>
+                        {{-- <td>{{ $work->translate('en')->title }}</td> --}}
                         <td>
                             <a href="{{ route('dashboard.services.workways.edit', $work->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>
                         </td>

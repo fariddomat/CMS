@@ -21,20 +21,20 @@
                     <label for="ar[question]" class="form-label">Question in Arabic</label>
                     <input type="text" name="ar[question]" class="form-control" value="{{ $question->translate('ar')->question }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[question]" class="form-label">Question in English</label>
                     <input type="text" name="en[question]" class="form-control" value="{{ $question->translate('en')->question }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[answer]" class="form-label">Answer in Arabic</label>
                     <textarea class="form-control" id="ar[answer]" name="ar[answer]" rows="3" dir="rtl">{{ $question->translate('ar')->answer }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[answer]" class="form-label">Answer in English</label>
                     <textarea class="form-control" id="en[answer]" name="en[answer]" rows="3">{{$question->translate('en')->answer}}</textarea>
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>

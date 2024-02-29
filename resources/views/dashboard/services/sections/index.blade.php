@@ -18,7 +18,7 @@
                     <tr>
                         <th>#</th>
                         <th>Title in Arabic</th>
-                        <th>Title in English</th>
+                        {{-- <th>Title in English</th> --}}
                         <th>Images</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -29,7 +29,7 @@
                     <tr>
                         <td>{{ $key + 1 }}</td>
                         <td>{{ $section->translate('ar')->title }}</td>
-                        <td>{{ $section->translate('en')->title }}</td>
+                        {{-- <td>{{ $section->translate('en')->title }}</td> --}}
                         <td>
                             <a href="{{ route('dashboard.services.sections.images.index', $section->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-images"></i> Images</a>
                         </td>

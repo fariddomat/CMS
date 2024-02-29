@@ -25,10 +25,10 @@
                     <label for="ar[caption]" class="form-label">Caption in Arabic</label>
                     <input type="text" name="ar[caption]" class="form-control" value="{{ $image->translate('ar')->caption }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[caption]" class="form-label">Caption in English</label>
                     <input type="text" name="en[caption]" class="form-control" value="{{ $image->translate('en')->caption }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label>Image</label>

@@ -33,11 +33,11 @@
                     <input type="text" name="ar[title]" class="form-control" value="{{ $blog->translate('ar')->title }}"
                         dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[title]" class="form-label">Title in English</label>
                     <input type="text" name="en[title]" class="form-control"
                         value="{{ $blog->translate('en')->title }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="slug" class="form-label">Link</label>
@@ -50,11 +50,11 @@
                         dir="rtl">{{ $blog->translate('ar')->introduction }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[introduction]" class="form-label">Introduction in English</label>
                     <textarea class="form-control" id="en[introduction]" name="en[introduction]"
                         rows="5">{{ $blog->translate('en')->introduction }}</textarea>
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[content_table]" class="form-label">Content table in Arabic</label>
@@ -62,11 +62,11 @@
                         dir="rtl">{{ $blog->translate('ar')->content_table }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[content_table]" class="form-label">Content table in English</label>
                     <textarea class="form-control" id="en[content_table]" name="en[content_table]"
                         rows="5">{{ $blog->translate('en')->content_table }}</textarea>
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[first_paragraph]" class="form-label">First paragraph in Arabic</label>
@@ -74,11 +74,11 @@
                         dir="rtl">{{ $blog->translate('ar')->first_paragraph }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[first_paragraph]" class="form-label">First paragraph in English</label>
                     <textarea class="form-control" id="en[first_paragraph]" name="en[first_paragraph]"
                         rows="5">{{ $blog->translate('en')->first_paragraph }}</textarea>
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[description]" class="form-label">Description in Arabic</label>
@@ -86,11 +86,11 @@
                         dir="rtl">{{ $blog->translate('ar')->description }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[description]" class="form-label">Description in English</label>
                     <textarea class="form-control" id="en[description]" name="en[description]"
                         rows="5">{{ $blog->translate('en')->description }}</textarea>
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="category" class="form-label">Select Category</label>
@@ -120,22 +120,22 @@
                     <input type="text" name="ar[author_name]" class="form-control" value="{{ $blog->translate('ar')->author_name }}"
                         dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[author_name]" class="form-label">Author Name in English</label>
                     <input type="text" name="en[author_name]" class="form-control"
                         value="{{ $blog->translate('en')->author_name }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[author_title]" class="form-label">Author Title in Arabic</label>
                     <input type="text" name="ar[author_title]" class="form-control" value="{{ $blog->translate('ar')->author_title }}"
                         dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[author_title]" class="form-label">Author Title in English</label>
                     <input type="text" name="en[author_title]" class="form-control"
                         value="{{ $blog->translate('en')->author_title }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label>Author Image</label>

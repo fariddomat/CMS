@@ -28,9 +28,9 @@
                         <option value="ar" @if ($image->lang=='ar')
                             selected
                         @endif>Arabic</option>
-                        <option value="en" @if ($image->lang=='en')
+                        {{-- <option value="en" @if ($image->lang=='en')
                             selected
-                        @endif>English</option>
+                        @endif>English</option> --}}
                     </select>
                 </div>
                 <div class="form-group mb-3">

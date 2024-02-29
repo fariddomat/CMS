@@ -24,37 +24,37 @@
                     <label for="ar[title]" class="form-label">Title in Arabic</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ old('ar.title') ?? isset($info) ? $info->translate('ar')->title : ''  }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[title]" class="form-label">Title in English</label>
                     <input type="text" name="en[title]" class="form-control" value="{{ old('en.title') ?? isset($info) ? $info->translate('en')->title : '' }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[description]" class="form-label">Description in Arabic</label>
                     <input type="text" name="ar[description]" class="form-control" value="{{ old('ar.description') ?? isset($info) ? $info->translate('ar')->description : '' }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[description]" class="form-label">Description in English</label>
                     <input type="text" name="en[description]" class="form-control" value="{{ old('en.description') ?? isset($info) ? $info->translate('en')->description : '' }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[work]" class="form-label">Work in Arabic</label>
                     <input type="text" name="ar[work]" class="form-control" value="{{ old('ar.work') ?? isset($info) ? $info->translate('ar')->work : '' }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[work]" class="form-label">Work in English</label>
                     <input type="text" name="en[work]" class="form-control" value="{{ old('en.work') ?? isset($info) ? $info->translate('en')->work : '' }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[work_description]" class="form-label">Work Description in Arabic</label>
                     <input type="text" name="ar[work_description]" class="form-control" value="{{ old('ar.work_description') ?? isset($info) ? $info->translate('ar')->work_description : '' }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[work_description]" class="form-label">Work Description in English</label>
                     <input type="text" name="en[work_description]" class="form-control" value="{{ old('en.work_description') ?? isset($info) ? $info->translate('en')->work_description : '' }}">
-                </div>
+                </div> --}}
 
 
                 <div class="form-group mb-3">

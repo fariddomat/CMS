@@ -22,19 +22,19 @@
                     <label for="ar[title]" class="form-label">Title in Arabic</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ $aboutfield->translate('ar')->title }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[title]" class="form-label">Title in English</label>
                     <input type="text" name="en[title]" class="form-control" value="{{ $aboutfield->translate('en')->title }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[value]" class="form-label">Value in Arabic</label>
                     <input type="text" name="ar[value]" class="form-control" value="{{ $aboutfield->translate('ar')->value }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[value]" class="form-label">Value in English</label>
                     <input type="text" name="en[value]" class="form-control" value="{{ $aboutfield->translate('en')->value }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Update </button>

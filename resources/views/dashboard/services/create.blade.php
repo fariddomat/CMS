@@ -26,10 +26,10 @@
                         <input type="text" name="ar[title]" class="form-control" value="{{ old('ar.title') }}"
                             dir="rtl">
                     </div>
-                    <div class="form-group mb-3">
+                    {{-- <div class="form-group mb-3">
                         <label for="en[title]" class="form-label">Title in English</label>
                         <input type="text" name="en[title]" class="form-control" value="{{ old('en.title') }}">
-                    </div>
+                    </div> --}}
 
                     <div class="form-group mb-3">
                         <label for="slug" class="form-label">Link</label>
@@ -41,20 +41,11 @@
                         <input type="text" name="ar[main_title]" class="form-control" value="{{ old('ar.main_title') }}"
                             dir="rtl">
                     </div>
-                    <div class="form-group mb-3">
+                    {{-- <div class="form-group mb-3">
                         <label for="en[main_title]" class="form-label">Main Title in English</label>
                         <input type="text" name="en[main_title]" class="form-control" value="{{ old('en.main_title') }}">
-                    </div>
+                    </div> --}}
 
-                    <div class="form-group mb-3">
-                        <label for="ar[index_name]" class="form-label">Index Name in Arabic</label>
-                        <input type="text" name="ar[index_name]" class="form-control" value="{{ old('ar.index_name') }}"
-                            dir="rtl">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="en[index_name]" class="form-label">Index Name in English</label>
-                        <input type="text" name="en[index_name]" class="form-control" value="{{ old('en.index_name') }}">
-                    </div>
 
                     <div class="form-group mb-3">
                         <img src="" style="width: 300px; display: none;" class="img-thumbnail logo-preview"
@@ -66,15 +57,11 @@
                         <textarea class="form-control" id="ar[brief]" name="ar[brief]" rows="5" dir="rtl">{{ old('ar.brief') }}</textarea>
                     </div>
 
-                    <div class="form-group mb-3">
+                    {{-- <div class="form-group mb-3">
                         <label for="en[brief]" class="form-label">Brief in English</label>
                         <textarea class="form-control" id="en[brief]" name="en[brief]" rows="5">{{ old('en.brief') }}</textarea>
-                    </div>
+                    </div> --}}
 
-                    <div class="form-group mb-3">
-                        <label for="icon_class" class="form-label">Icon Class</label>
-                        <input type="text" name="icon_class" class="form-control" value="{{ old('icon_class') }}">
-                    </div>
 
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="checkbox" value="1" id="showed" name="showed"

@@ -22,10 +22,10 @@
                     <label for="ar[name]" class="form-label">Name in Arabic</label>
                     <input type="text" name="ar[name]" class="form-control" value="{{ $blogcategory->translate('ar')->name }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[name]" class="form-label">Name in English</label>
                     <input type="text" name="en[name]" class="form-control" value="{{ $blogcategory->translate('en')->name }}">
-                </div>
+                </div> --}}
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" value="1" id="showed" name="showed" {{ $blogcategory->showed  == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="showed">

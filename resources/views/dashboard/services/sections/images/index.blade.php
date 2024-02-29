@@ -18,7 +18,7 @@
                     <tr>
                         <th>#</th>
                         <th>Caption in Arabic</th>
-                        <th>Caption in English</th>
+                        {{-- <th>Caption in English</th> --}}
                         <th>Image</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -29,7 +29,7 @@
                     <tr>
                         <td>{{ $key + 1 }}</td>
                         <td>{{ $image->translate('ar')->caption }}</td>
-                        <td>{{ $image->translate('en')->caption }}</td>
+                        {{-- <td>{{ $image->translate('en')->caption }}</td> --}}
                         <td> <img src="{{asset($image->image)}}" style="width: 125px; height: auto;" alt=""> </td>
                         <td>
                             <a href="{{ route('dashboard.services.sections.images.edit', $image->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>

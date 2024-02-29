@@ -30,20 +30,20 @@
                     <label for="ar[name]" class="form-label">Name in Arabic</label>
                     <input type="text" name="ar[name]" class="form-control" value="{{ old('ar.name') }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[name]" class="form-label">Name in English</label>
                     <input type="text" name="en[name]" class="form-control" value="{{ old('en.name') }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[description]" class="form-label">description in Arabic</label>
                     <textarea class="form-control" id="ar[description]" name="ar[description]" rows="3" dir="rtl">{{ old('ar.description') }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[description]" class="form-label">description in English</label>
                     <textarea class="form-control" id="en[description]" name="en[description]" rows="3">{{old('en.description')}}</textarea>
-                </div>
+                </div> --}}
                 <div class="form-group mb-3">
                     <label for="icon_class" class="form-label">Icon Class</label>
                     <input type="text" name="icon_class" class="form-control" value="{{ old('icon_class') }}">

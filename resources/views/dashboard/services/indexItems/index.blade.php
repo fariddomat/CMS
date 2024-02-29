@@ -18,7 +18,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name in Arabic</th>
-                        <th>Name in English</th>
+                        {{-- <th>Name in English</th> --}}
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -28,7 +28,7 @@
                     <tr>
                         <td>{{ $key + 1 }}</td>
                         <td>{{ $item->translate('ar')->name }}</td>
-                        <td>{{ $item->translate('en')->name }}</td>
+                        {{-- <td>{{ $item->translate('en')->name }}</td> --}}
                         <td>
                             <a href="{{ route('dashboard.services.indexitems.edit', $item->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>
                         </td>

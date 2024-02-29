@@ -1,8 +1,11 @@
 waiting tasks
-Clients
+    Clients
 
-Customers
+    Customers
 
-Vcardimage
+    Vcardimage
 
 >>> Clean all controller to support only arabic language
+    hide english support
+>>> clean all views to support only arabic language
+    hide english supoort

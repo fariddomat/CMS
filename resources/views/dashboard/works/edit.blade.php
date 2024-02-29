@@ -33,11 +33,11 @@
                     <input type="text" name="ar[title]" class="form-control" value="{{ $work->translate('ar')->title }}"
                         dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[title]" class="form-label">Title in English</label>
                     <input type="text" name="en[title]" class="form-control"
                         value="{{ $work->translate('en')->title }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="slug" class="form-label">Link</label>
@@ -50,11 +50,11 @@
                         dir="rtl">{{ $work->translate('ar')->description }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[description]" class="form-label">Description in English</label>
                     <textarea class="form-control" id="en[description]" name="en[description]"
                         rows="5">{{ $work->translate('en')->description }}</textarea>
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="category" class="form-label">Select Category</label>

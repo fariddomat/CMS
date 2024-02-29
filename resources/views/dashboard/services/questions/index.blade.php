@@ -18,7 +18,7 @@
                     <tr>
                         <th>#</th>
                         <th>Question in Arabic</th>
-                        <th>Question in English</th>
+                        {{-- <th>Question in English</th> --}}
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -28,7 +28,7 @@
                     <tr>
                         <td>{{ $key + 1 }}</td>
                         <td>{{ $question->translate('ar')->question }}</td>
-                        <td>{{ $question->translate('en')->question }}</td>
+                        {{-- <td>{{ $question->translate('en')->question }}</td> --}}
                         <td>
                             <a href="{{ route('dashboard.services.questions.edit', $question->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>
                         </td>

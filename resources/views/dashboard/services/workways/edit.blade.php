@@ -21,20 +21,20 @@
                     <label for="ar[title]" class="form-label">Title in Arabic</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ $workway->translate('ar')->title }}" dir="rtl">
                 </div>
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[title]" class="form-label">Title in English</label>
                     <input type="text" name="en[title]" class="form-control" value="{{ $workway->translate('en')->title }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <label for="ar[content]" class="form-label">Content in Arabic</label>
                     <textarea class="form-control" id="ar[content]" name="ar[content]" rows="3" dir="rtl">{{ $workway->translate('ar')->content }}</textarea>
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="en[content]" class="form-label">Content in English</label>
                     <textarea class="form-control" id="en[content]" name="en[content]" rows="3">{{$workway->translate('en')->content}}</textarea>
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>

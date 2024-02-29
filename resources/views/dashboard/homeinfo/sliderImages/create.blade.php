@@ -24,7 +24,7 @@
                     <label>Lang</label>
                     <select name="lang" class="form-control" id="">
                         <option value="ar">Arabic</option>
-                        <option value="en">English</option>
+                        {{-- <option value="en">English</option> --}}
                     </select>
                 </div>
                 <div class="form-group mb-3">
