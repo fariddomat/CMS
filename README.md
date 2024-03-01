@@ -1,4 +1,5 @@
 waiting tasks
+    js editor
     Clients
 
     Customers

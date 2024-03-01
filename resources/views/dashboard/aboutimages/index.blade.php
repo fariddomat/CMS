@@ -3,7 +3,7 @@
 @section('aboutimagesActive', 'active')
 @section('content')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">About Images</div>
+    <div class="card-header">About صور حول الموقع</div>
 </div>
 <div class="container">
     <div class="row justify-content-center">
@@ -20,10 +20,10 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Section</th>
-                        <th>Showed</th>
-                        <th>Edit</th>
+                        <th>الاسم</th>
+                        <th>القسم</th>
+                        <th>عرض</th>
+                        <th>تعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,7 @@
                         <td>{{ $index }}</td>
                         <td>{{ basename($image->image) }}</td>
                         <td>{{ $names[$index] }}</td>
-                        <td>{{ $image->showed == 1 ? 'Showed' : 'Hidden' }}</td>
+                        <td>{{ $image->showed == 1 ? 'نعم' : 'مخفي' }}</td>
                         <td>
                             <a href="{{ route('dashboard.aboutimages.edit', $image->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>
                         </td>

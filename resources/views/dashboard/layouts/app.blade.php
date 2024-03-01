@@ -78,75 +78,76 @@
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link @yield('homeActive')" aria-current="page" href="{{ route('dashboard.home') }}">
-                        Dashboard
+                        لوحة التحكم
                     </a>
                 </li>
                 @if (auth()->user()->hasRole('superadministrator'))
                     <li class="nav-item">
-                        <a class="nav-link @yield('passwordEditActive')" href="{{ route('dashboard.password.edit') }}">
-                            Change Password
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('servicesActive')" href="{{ route('dashboard.services.index') }}">
-                            Services
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('orderservicesActive')" href="{{ route('dashboard.orderservices.index') }}">
-                            Order Services
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('contactusActive')" href="{{ route('dashboard.contact-us.index') }}">
-                            Contact Us
+                        <a class="nav-link @yield('homeinfoActive')" href="{{ route('dashboard.homeinfo.create') }}">
+                            الصفحة الرئيسية
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @yield('aboutActive')" href="{{ route('dashboard.about.create') }}">
-                            About
+                            حول الموقع
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @yield('aboutimagesActive')" href="{{ route('dashboard.aboutimages.index') }}">
-                            About Images
+                            صور حول الموقع
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link @yield('servicesActive')" href="{{ route('dashboard.services.index') }}">
+                            الخدمات
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @yield('orderservicesActive')" href="{{ route('dashboard.orderservices.index') }}">
+                            طلبات الخدمات
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @yield('contactusActive')" href="{{ route('dashboard.contact-us.index') }}">
+                            اتصل بنا
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @yield('socialmediaActive')" href="{{ route('dashboard.socialmedia.index') }}">
-                            Social Media
+                            منصات التواصل الاجتماعي
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link @yield('partnerActive')" href="{{ route('dashboard.partnerSlider.index') }}">
-                            Partners
+                            شركائنا
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link @yield('teamActive')" href="{{ route('dashboard.team.index') }}">
-                            Our Team
+                            فريق العمل
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @yield('experinceActive')" href="{{ route('dashboard.experinceSlider.index') }}">
-                            Team Experince
+                            خبرات فريق العمل
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @yield('contactinfoActive')" href="{{ route('dashboard.contactinfo.create') }}">
-                            Contact Info
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('homeinfoActive')" href="{{ route('dashboard.homeinfo.create') }}">
-                            Home Info
+                            معلومات التواصل
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @yield('aboutfieldsActive')" href="{{ route('dashboard.aboutfields.index') }}">
-                            About Fields
+                            About حقول
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @yield('privacyActive')" href="{{ route('dashboard.privacy.create') }}">
+                            سياسة الخصوصية
                         </a>
                     </li>
                     {{-- <li class="nav-item">
@@ -159,26 +160,32 @@
                         Works
                     </a>
                 </li> --}}
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link @yield('clientsActive')" href="{{ route('dashboard.clients.index') }}">
                             Clients
                         </a>
-                    </li>
+                    </li> --}}
                 @endif
                 <li class="nav-item">
                     <a class="nav-link @yield('blogcategoriesActive')" href="{{ route('dashboard.blogcategories.index') }}">
-                        Blog Categories
+                        التصنيفات
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @yield('blogsActive')" href="{{ route('dashboard.blogs.index') }}">
-                        Blogs
+                        المدونة
                     </a>
                 </li>
                 @if (auth()->user()->hasRole('superadministrator'))
                     <li class="nav-item">
                         <a class="nav-link @yield('blogPDFActive')" href="{{ route('dashboard.blogPDF.create') }}">
-                            Blog PDF
+                            غلاف المدونة
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link @yield('passwordEditActive')" href="{{ route('dashboard.password.edit') }}">
+                            تغيير كلمة السر
                         </a>
                     </li>
                     {{-- <li class="nav-item">
@@ -186,17 +193,13 @@
                         Customers
                     </a>
                 </li> --}}
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link @yield('colorActive')" href="{{ route('dashboard.color.create') }}">
-                            Color
+                            ألوان الموقع
                         </a>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item">
-                        <a class="nav-link @yield('privacyActive')" href="{{ route('dashboard.privacy.create') }}">
-                            Privacy
-                        </a>
-                    </li>
+
                     {{-- <li class="nav-item">
                     <a class="nav-link @yield('smsContactActive')" href="{{route('dashboard.sms.contact.create')}}">
                         SMS Contact Us
@@ -234,7 +237,7 @@
                 <div class="col-lg-12">
                     <div class="card">
 
-                            @yield('content')
+                        @yield('content')
                     </div>
                 </div>
             </div>
@@ -243,7 +246,7 @@
 
 
     <footer class="footer">
-        <span class="text-left"> &copy; 2024 .
+        <span class="text-left"> &copy; {{ now()->year }} .
         </span>
     </footer>
     <!-- Bootstrap and necessary plugins -->
@@ -265,7 +268,7 @@
     {{-- <script src="{{ asset('dashboard/js/views/charts.js') }}"></script> --}}
 
     @extends('layouts._noty')
-    {{-- @yield('scripts') --}}
+    @yield('scripts')
     @stack('scripts')
 </body>
 

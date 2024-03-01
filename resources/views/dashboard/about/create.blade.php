@@ -27,7 +27,7 @@
                 @csrf()
 
                 <div class="form-group mb-3">
-                    <label for="ar[about_me]" class="form-label">About Me in Arabic</label>
+                    <label for="ar[about_me]" class="form-label">عن الشركة About</label>
                     <textarea class="form-control" id="ar[about_me]" name="ar[about_me]" rows="5" dir="rtl">{{ old('ar.about_me') ?? isset($about) ? $about->translate('ar')->about_me : '' }}</textarea>
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -36,7 +36,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[brief]" class="form-label">Brief about company in Arabic</label>
+                    <label for="ar[brief]" class="form-label">التعريف غن الشركة</label>
                     <textarea class="form-control" id="ar[brief]" name="ar[brief]" rows="5" dir="rtl">{{ old('ar.brief') ?? isset($about) ? $about->translate('ar')->brief : '' }}</textarea>
                 </div>
 
@@ -46,7 +46,7 @@
                 </div> --}}
                 <hr>
                 <div class="form-group mb-3">
-                    <label for="ar[who]" class="form-label">Who are we? in Arabic</label>
+                    <label for="ar[who]" class="form-label">من نحن؟</label>
                     <textarea class="form-control" id="ar[who]" name="ar[who]" rows="5" dir="rtl">{{ old('ar.who') ?? isset($about) ? $about->translate('ar')->who_are_we : '' }}</textarea>
                 </div>
 
@@ -56,7 +56,7 @@
                 </div> --}}
                 <hr>
                 <div class="form-group mb-3">
-                    <label for="ar[history]" class="form-label">Our history in Arabic</label>
+                    <label for="ar[history]" class="form-label">تاريخنا</label>
                     <textarea class="form-control" id="ar[history]" name="ar[history]" rows="5" dir="rtl">{{ old('ar.history') ?? isset($about) ? $about->translate('ar')->history : '' }}</textarea>
                 </div>
 
@@ -66,7 +66,7 @@
                 </div> --}}
                 <hr>
                 <div class="form-group mb-3">
-                    <label for="ar[massage]" class="form-label">Our message in Arabic</label>
+                    <label for="ar[massage]" class="form-label">رسالتنا</label>
                     <textarea class="form-control" id="ar[massage]" name="ar[massage]" rows="5" dir="rtl">{{ old('ar.massage') ?? isset($about) ? $about->translate('ar')->massage : '' }}</textarea>
                 </div>
 
@@ -76,7 +76,7 @@
                 </div> --}}
                 <hr>
                 <div class="form-group mb-3">
-                    <label for="ar[goals]" class="form-label">Our goals in Arabic</label>
+                    <label for="ar[goals]" class="form-label">أهدافنا</label>
                     <textarea class="form-control" id="ar[goals]" name="ar[goals]" rows="5" dir="rtl">{{ old('ar.goals') ?? isset($about) ? $about->translate('ar')->goals : '' }}</textarea>
                 </div>
 
@@ -86,7 +86,7 @@
                 </div> --}}
                 <hr>
                 <div class="form-group mb-3">
-                    <label for="ar[vision]" class="form-label">Our vision in Arabic</label>
+                    <label for="ar[vision]" class="form-label">رؤيتنا</label>
                     <textarea class="form-control" id="ar[vision]" name="ar[vision]" rows="5" dir="rtl">{{ old('ar.vision') ?? isset($about) ? $about->translate('ar')->vision : '' }}</textarea>
                 </div>
 
@@ -96,7 +96,7 @@
                 </div> --}}
                 <hr>
                 <div class="form-group mb-3">
-                    <label for="ar[ambition]" class="form-label">Our ambition in Arabic</label>
+                    <label for="ar[ambition]" class="form-label">طموحنا</label>
                     <textarea class="form-control" id="ar[ambition]" name="ar[ambition]" rows="5" dir="rtl">{{ old('ar.ambition') ?? isset($about) ? $about->translate('ar')->ambition : '' }}</textarea>
                 </div>
 
@@ -106,7 +106,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[values]" class="form-label">Our values in Arabic</label>
+                    <label for="ar[values]" class="form-label">قيمنا</label>
                     <textarea class="form-control" id="ar[values]" name="ar[values]" rows="5" dir="rtl">{{ old('ar.values') ?? isset($about) ? $about->translate('ar')->values : '' }}</textarea>
                 </div>
 

@@ -66,7 +66,7 @@ Route::group(
 Route::get('/sitemap.xml', 'SitemapXmlController@index')->name('sitemap');
 
 
-Route::group(['prefix' => '/dashboard', 'middleware' => ['auth', 'setEnLocale'], 'as' => 'dashboard.'], function () {
+Route::group(['prefix' => '/dashboard', 'middleware' => ['auth', 'setArLocale'], 'as' => 'dashboard.'], function () {
     Route::get('/home', 'Dashboard\DashboardController@home')->name('home');
     Route::get('/services/{service}/edit', 'Dashboard\ServiceController@edit')->name('services.edit');
     Route::get('/services', 'Dashboard\ServiceController@index')->name('services.index');
@@ -252,7 +252,7 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['auth', 'setEnLocale'],
 });
 
 
-Route::group(['prefix' => '/customers/dashboard', 'middleware' => ['auth', 'setEnLocale'], 'as' => 'customers.dashboard.'], function () {
+Route::group(['prefix' => '/customers/dashboard', 'middleware' => ['auth', 'setArLocale'], 'as' => 'customers.dashboard.'], function () {
     Route::get('/home', 'Customers\DashboardController@home')->name('home');
 
     Route::get('/basicinfo', 'Customers\BasicInfoController@create')->name('basicinfo.create');

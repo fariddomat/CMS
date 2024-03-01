@@ -15,7 +15,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Update Blog</div>
+    <div class="card-header">تعديل مقال</div>
 </div>
 <div>
     @include('partials._errors')
@@ -29,7 +29,7 @@
                 {{ method_field('put') }}
 
                 <div class="form-group mb-3">
-                    <label for="ar[title]" class="form-label">Title in Arabic</label>
+                    <label for="ar[title]" class="form-label">العنوان</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ $blog->translate('ar')->title }}"
                         dir="rtl">
                 </div>
@@ -40,12 +40,12 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="slug" class="form-label">Link</label>
+                    <label for="slug" class="form-label">الرابط Link</label>
                     <input type="text" name="slug" class="form-control" value="{{ $blog->slug }}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="ar[introduction]" class="form-label">Introduction in Arabic</label>
+                    <label for="ar[introduction]" class="form-label">تعريف - Introduction </label>
                     <textarea class="form-control" id="ar[introduction]" name="ar[introduction]" rows="5"
                         dir="rtl">{{ $blog->translate('ar')->introduction }}</textarea>
                 </div>
@@ -57,7 +57,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[content_table]" class="form-label">Content table in Arabic</label>
+                    <label for="ar[content_table]" class="form-label">جدول المحتويات - Content table</label>
                     <textarea class="form-control" id="ar[content_table]" name="ar[content_table]" rows="5"
                         dir="rtl">{{ $blog->translate('ar')->content_table }}</textarea>
                 </div>
@@ -69,7 +69,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[first_paragraph]" class="form-label">First paragraph in Arabic</label>
+                    <label for="ar[first_paragraph]" class="form-label">النص الأول - First paragraph</label>
                     <textarea class="form-control" id="ar[first_paragraph]" name="ar[first_paragraph]" rows="5"
                         dir="rtl">{{ $blog->translate('ar')->first_paragraph }}</textarea>
                 </div>
@@ -81,7 +81,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[description]" class="form-label">Description in Arabic</label>
+                    <label for="ar[description]" class="form-label">الوصف - Description</label>
                     <textarea class="form-control" id="ar[description]" name="ar[description]" rows="5"
                         dir="rtl">{{ $blog->translate('ar')->description }}</textarea>
                 </div>
@@ -93,7 +93,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="category" class="form-label">Select Category</label>
+                    <label for="category" class="form-label">اختر تصنيف</label>
                     <select class="form-select" name="category" id="category">
                         @foreach($categories as $category)
                         <option value="{{$category->id}}" {{ $blog->blog_category_id == $category->id ? 'selected' : '' }}>{{$category->name}}</option>
@@ -104,19 +104,19 @@
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" value="1" id="showed" name="showed" {{ $blog->showed  == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="showed">
-                      Showed
+                      عرض
                     </label>
                 </div>
 
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" value="1" id="show_at_home" name="show_at_home" {{ $blog->show_at_home  == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="show_at_home">
-                      Show at home
+                      عرض في الصفحة الرئيسية
                     </label>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="ar[author_name]" class="form-label">Author Name in Arabic</label>
+                    <label for="ar[author_name]" class="form-label">اسم الكاتب</label>
                     <input type="text" name="ar[author_name]" class="form-control" value="{{ $blog->translate('ar')->author_name }}"
                         dir="rtl">
                 </div>
@@ -127,7 +127,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[author_title]" class="form-label">Author Title in Arabic</label>
+                    <label for="ar[author_title]" class="form-label">وصف الكاتب</label>
                     <input type="text" name="ar[author_title]" class="form-control" value="{{ $blog->translate('ar')->author_title }}"
                         dir="rtl">
                 </div>
@@ -138,7 +138,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label>Author Image</label>
+                    <label>صورة الكاتب</label>
                     <input type="file" name="author_image" class="form-control about-me-image">
                 </div>
 
@@ -148,37 +148,37 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="author_instagram" class="form-label">Author Instagram</label>
+                    <label for="author_instagram" class="form-label">الكاتب Instagram</label>
                     <input type="text" name="author_instagram" class="form-control"
                         value="{{ $blog->author_instagram }}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="author_snapchat" class="form-label">Author Snapchat</label>
+                    <label for="author_snapchat" class="form-label">الكاتب Snapchat</label>
                     <input type="text" name="author_snapchat" class="form-control"
                         value="{{ $blog->author_snapchat }}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="author_twitter" class="form-label">Author Twitter</label>
+                    <label for="author_twitter" class="form-label">الكاتب Twitter</label>
                     <input type="text" name="author_twitter" class="form-control"
                         value="{{ $blog->author_twitter }}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="author_tiktok" class="form-label">Author Tiktok</label>
+                    <label for="author_tiktok" class="form-label">الكاتب Tiktok</label>
                     <input type="text" name="author_tiktok" class="form-control"
                         value="{{ $blog->author_tiktok }}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="author_linkedin" class="form-label">Author Linkedin</label>
+                    <label for="author_linkedin" class="form-label">الكاتب Linkedin</label>
                     <input type="text" name="author_linkedin" class="form-control"
                         value="{{ $blog->author_linkedin }}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label>Image</label>
+                    <label>الصورة</label>
                     <input type="file" name="image" class="form-control image">
                 </div>
 
@@ -188,7 +188,7 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> تعديل </button>
                 </div>
             </form>
         </div>

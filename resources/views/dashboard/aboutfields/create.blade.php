@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Add New About Field</div>
+    <div class="card-header">إضافة حقل</div>
 </div>
 <div>
     @include('partials._errors')
@@ -18,7 +18,7 @@
                 @csrf()
 
                 <div class="form-group mb-3">
-                    <label for="ar[title]" class="form-label">Title in Arabic</label>
+                    <label for="ar[title]" class="form-label">العنوان</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ old('ar.title') }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -27,7 +27,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[value]" class="form-label">Value in Arabic</label>
+                    <label for="ar[value]" class="form-label">القيمة</label>
                     <input type="text" name="ar[value]" class="form-control" value="{{ old('ar.value') }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -36,7 +36,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Add </button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> إضافة </button>
                 </div>
             </form>
         </div>

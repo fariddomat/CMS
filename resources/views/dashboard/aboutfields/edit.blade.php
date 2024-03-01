@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Update About Field</div>
+    <div class="card-header">تعديل حقل</div>
 </div>
 <div>
     @include('partials._errors')
@@ -19,7 +19,7 @@
                 {{ method_field('put') }}
 
                 <div class="form-group mb-3">
-                    <label for="ar[title]" class="form-label">Title in Arabic</label>
+                    <label for="ar[title]" class="form-label">العنوان</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ $aboutfield->translate('ar')->title }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -28,7 +28,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[value]" class="form-label">Value in Arabic</label>
+                    <label for="ar[value]" class="form-label">القيمة</label>
                     <input type="text" name="ar[value]" class="form-control" value="{{ $aboutfield->translate('ar')->value }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -37,7 +37,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Update </button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> تعديل </button>
                 </div>
             </form>
         </div>

@@ -23,7 +23,7 @@
 @endsection
 @section('content')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Blocked Contact</div>
+    <div class="card-header">الحسابات المحظورة</div>
 </div>
 <div class="container">
     <a href="{{ route('dashboard.blocked_contact.create') }}" class="btn btn-primary">New Block</a>
@@ -33,10 +33,10 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Message</th>
-                        <th>Delete</th>
+                        <th>الاسم</th>
+                        <th>البريد الإلكتروني</th>
+                        <th>الرسالة</th>
+                        <th>حذف</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,7 +50,7 @@
                             <form action="{{ route('dashboard.blocked_contact.destroy', $contact->id) }}" method="post" style="display: inline-block">
                                 {{ csrf_field() }}
                                 {{ method_field('delete') }}
-                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> Delete</button>
+                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> حذف</button>
                             </form><!-- end of form -->
                         </td>
                     </tr>
