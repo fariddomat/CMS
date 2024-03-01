@@ -14,7 +14,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Add New Index Item For {{$service->title}}</div>
+    <div class="card-header">إضافة ل {{$service->title}}</div>
 </div>
 <div>
     @include('partials._errors')
@@ -27,7 +27,7 @@
                 @csrf()
 
                 <div class="form-group mb-3">
-                    <label for="ar[name]" class="form-label">Name in Arabic</label>
+                    <label for="ar[name]" class="form-label">الاسم</label>
                     <input type="text" name="ar[name]" class="form-control" value="{{ old('ar.name') }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -36,7 +36,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[description]" class="form-label">description in Arabic</label>
+                    <label for="ar[description]" class="form-label">الوصف</label>
                     <textarea class="form-control" id="ar[description]" name="ar[description]" rows="3" dir="rtl">{{ old('ar.description') }}</textarea>
                 </div>
 
@@ -44,12 +44,8 @@
                     <label for="en[description]" class="form-label">description in English</label>
                     <textarea class="form-control" id="en[description]" name="en[description]" rows="3">{{old('en.description')}}</textarea>
                 </div> --}}
-                <div class="form-group mb-3">
-                    <label for="icon_class" class="form-label">Icon Class</label>
-                    <input type="text" name="icon_class" class="form-control" value="{{ old('icon_class') }}">
-                </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label for="" class="form-label">Sub Service Link</label>
                     <select name="sub_service_id" class="form-control">
                         <option value="">( Optional )</option>
@@ -58,10 +54,10 @@
                         @endforeach
                     </select>
                 </div>
-
+ --}}
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Add </button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> إضافة </button>
                 </div>
             </form>
         </div>

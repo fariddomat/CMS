@@ -9,7 +9,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Update Image For {{$image->serviceSection->title}}</div>
+    <div class="card-header">تعديل الصورة ل {{$image->serviceSection->title}}</div>
 </div>
 <div>
     @include('partials._errors')
@@ -22,7 +22,7 @@
                 @csrf()
                 @method('PUT')
                 <div class="form-group mb-3">
-                    <label for="ar[caption]" class="form-label">Caption in Arabic</label>
+                    <label for="ar[caption]" class="form-label">الوصف</label>
                     <input type="text" name="ar[caption]" class="form-control" value="{{ $image->translate('ar')->caption }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -31,7 +31,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label>Image</label>
+                    <label>الصورة</label>
                     <input type="file" name="image" class="form-control image">
                 </div>
 
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> تعديل </button>
                 </div>
             </form>
         </div>

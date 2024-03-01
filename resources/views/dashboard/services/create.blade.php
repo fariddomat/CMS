@@ -9,7 +9,7 @@
 @section('content')
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <div class="card-header">Add New Service</div>
+        <div class="card-header">إضافة خدمة جديدة</div>
     </div>
     <div>
         @include('partials._errors')
@@ -22,7 +22,7 @@
                     @csrf()
 
                     <div class="form-group mb-3">
-                        <label for="ar[title]" class="form-label">Title in Arabic</label>
+                        <label for="ar[title]" class="form-label">عنوان الخدمة</label>
                         <input type="text" name="ar[title]" class="form-control" value="{{ old('ar.title') }}"
                             dir="rtl">
                     </div>
@@ -32,12 +32,12 @@
                     </div> --}}
 
                     <div class="form-group mb-3">
-                        <label for="slug" class="form-label">Link</label>
+                        <label for="slug" class="form-label">الرابط - Link</label>
                         <input type="text" name="slug" class="form-control" value="{{ old('slug') }}">
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="ar[main_title]" class="form-label">Main Title in Arabic</label>
+                        <label for="ar[main_title]" class="form-label">العنوان الرئيسي</label>
                         <input type="text" name="ar[main_title]" class="form-control" value="{{ old('ar.main_title') }}"
                             dir="rtl">
                     </div>
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="ar[brief]" class="form-label">Brief in Arabic</label>
+                        <label for="ar[brief]" class="form-label">التعريف - Brief</label>
                         <textarea class="form-control" id="ar[brief]" name="ar[brief]" rows="5" dir="rtl">{{ old('ar.brief') }}</textarea>
                     </div>
 
@@ -67,7 +67,7 @@
                         <input class="form-check-input" type="checkbox" value="1" id="showed" name="showed"
                             {{ old('showed') == '1' ? 'checked' : '' }}>
                         <label class="form-check-label" for="showed">
-                            Showed
+                            عرض
                         </label>
                     </div>
 
@@ -75,13 +75,13 @@
                         <input class="form-check-input" type="checkbox" value="1" id="show_at_home"
                             name="show_at_home" {{ old('show_at_home') == '1' ? 'checked' : '' }}>
                         <label class="form-check-label" for="show_at_home">
-                            Show at home
+                            عرض في الصفحة الرئيسية
                         </label>
                     </div>
 
 
                     <div class="form-group mb-3">
-                        <label>Thumbnail Image</label>
+                        <label>الصورة المصغرة</label>
                         <input type="file" name="image" class="form-control image">
                     </div>
 
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label>Index Image</label>
+                        <label>الصورة الرئيسية</label>
                         <input type="file" name="index_image" class="form-control logo">
                     </div>
 
@@ -102,7 +102,7 @@
 
 
                     <div class="form-group mb-3">
-                        <label>Index Image 2</label>
+                        <label>الصورة الرئيسية 2</label>
                         <input type="file" name="index_image_2" class="form-control logo2">
                     </div>
 
@@ -112,16 +112,16 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label>Parent Service</label>
+                        <label>الخدمة التابع لها</label>
                         <select name="parent_id" id="" class="form-control">
-                            <option value="">Select a service to make this as sub service</option>
+                            <option value="">اختر خدمة لتصبح هذه الخدمة فرعية ضمنها</option>
                             @foreach ($services as $service)
                                 <option value="{{ $service->id }}">{{ $service->title }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group mb-3">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Add </button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> إضافة </button>
                     </div>
 
                 </form>

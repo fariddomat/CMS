@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Update Question For {{$question->service->title}}</div>
+    <div class="card-header">تعديل السؤال ل {{$question->service->title}}</div>
 </div>
 <div>
     @include('partials._errors')
@@ -18,7 +18,7 @@
                 @csrf()
                 @method('PUT')
                 <div class="form-group mb-3">
-                    <label for="ar[question]" class="form-label">Question in Arabic</label>
+                    <label for="ar[question]" class="form-label">السؤال</label>
                     <input type="text" name="ar[question]" class="form-control" value="{{ $question->translate('ar')->question }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -27,7 +27,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[answer]" class="form-label">Answer in Arabic</label>
+                    <label for="ar[answer]" class="form-label">الإجابة</label>
                     <textarea class="form-control" id="ar[answer]" name="ar[answer]" rows="3" dir="rtl">{{ $question->translate('ar')->answer }}</textarea>
                 </div>
 
@@ -37,7 +37,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> تعديل </button>
                 </div>
             </form>
         </div>

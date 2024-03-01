@@ -56,7 +56,7 @@
 @section('content')
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <div class="card-header">Update Service</div>
+        <div class="card-header">تعديل الخدمة</div>
     </div>
     <div>
         @include('partials._errors')
@@ -71,7 +71,7 @@
                     {{ method_field('put') }}
 
                     <div class="form-group mb-3">
-                        <label for="ar[title]" class="form-label">Title in Arabic</label>
+                        <label for="ar[title]" class="form-label">العنوان - Title</label>
                         <input type="text" name="ar[title]" class="form-control"
                             value="{{ $service->translate('ar')->title }}" dir="rtl">
                     </div>
@@ -82,12 +82,12 @@
                     </div> --}}
 
                     <div class="form-group mb-3">
-                        <label for="slug" class="form-label">Link</label>
+                        <label for="slug" class="form-label">الرابط - Link</label>
                         <input type="text" name="slug" class="form-control" value="{{ $service->slug }}">
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="ar[main_title]" class="form-label">Main Title in Arabic</label>
+                        <label for="ar[main_title]" class="form-label">العنوان الرئيسي</label>
                         <input type="text" name="ar[main_title]" class="form-control"
                             value="{{ $service->translate('ar')->main_title }}" dir="rtl">
                     </div>
@@ -101,7 +101,7 @@
 
 
                     <div class="form-group mb-3">
-                        <label for="ar[brief]" class="form-label">Brief in Arabic</label>
+                        <label for="ar[brief]" class="form-label">التعريف - Brief</label>
                         <textarea class="form-control" id="ar[brief]" name="ar[brief]" rows="5" dir="rtl">{{ $service->translate('ar')->brief }}</textarea>
                     </div>
 
@@ -110,13 +110,13 @@
                         <textarea class="form-control" id="en[brief]" name="en[brief]" rows="5">{{ $service->translate('en')->brief }}</textarea>
                     </div> --}}
 
-                 
+
 
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="checkbox" value="1" id="showed" name="showed"
                             {{ $service->showed == 1 ? 'checked' : '' }}>
                         <label class="form-check-label" for="showed">
-                            Showed
+                            عرض
                         </label>
                     </div>
 
@@ -124,13 +124,13 @@
                         <input class="form-check-input" type="checkbox" value="1" id="show_at_home"
                             name="show_at_home" {{ $service->show_at_home == 1 ? 'checked' : '' }}>
                         <label class="form-check-label" for="show_at_home">
-                            Show at home
+                            عرض في الصفحة الرئيسية
                         </label>
                     </div>
 
 
                     <div class="form-group mb-3">
-                        <label>Thumbnail Image</label>
+                        <label>الصورة المصغرة</label>
                         <input type="file" name="image" class="form-control image">
                     </div>
 
@@ -141,7 +141,7 @@
 
 
                     <div class="form-group mb-3">
-                        <label>Index Image
+                        <label>الصورة الرئيسية
                         </label>
                         <input type="file" name="index_image" class="form-control logo">
                     </div>
@@ -164,7 +164,7 @@
 
 
                     <div class="form-group mb-3">
-                        <label>Index Image 2
+                        <label>الصورة الرئيسية 2
                         </label>
                         <input type="file" name="index_image_2" class="form-control logo2">
                     </div>
@@ -184,9 +184,9 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label>Parent Service</label>
+                        <label>الخدمة التابع لها</label>
                         <select name="parent_id" id="" class="form-control">
-                            <option value="">Select a service to make this as sub service</option>
+                            <option value="">اختر خدمة لتصبح هذه الخدمة فرعية ضمنها</option>
                             @foreach ($services as $item)
                                 <option value="{{ $item->id }}" @if ($item->id == $service->parent_id)
                                     selected
@@ -196,14 +196,14 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>
-                        <a href="{{route('dashboard.services.indexitems.index', $service->id)}}" class="btn btn-primary"> index items </a>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> تعديل </button>
+                        <a href="{{route('dashboard.services.indexitems.index', $service->id)}}" class="btn btn-primary">الفهرس - index items </a>
                         <a href="{{ route('dashboard.services.sections.index', $service->id) }}" class="btn btn-primary">
-                            sections </a>
+                            الأقسام - sections </a>
                         {{-- <a href="{{route('dashboard.services.workways.index', $service->id)}}" class="btn btn-primary"> work ways </a> --}}
-                        {{-- <a href="{{route('dashboard.services.questions.index', $service->id)}}" class="btn btn-primary"> questions </a> --}}
+                        <a href="{{route('dashboard.services.questions.index', $service->id)}}" class="btn btn-primary">الأسئلة الشائعة - questions </a>
                         <a href="{{ route('dashboard.services.sliderImages.index', $service->id) }}"
-                            class="btn btn-primary"> Slider Images </a>
+                            class="btn btn-primary"> صور السلايدر - slider </a>
                         {{-- <a href="{{ route('dashboard.services.sliderHeaderImages.index', $service->id) }}" class="btn btn-primary">Header Slider Images</a> --}}
                     </div>
                 </form>

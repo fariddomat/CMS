@@ -3,7 +3,7 @@
 @section('servicesActive', 'active')
 @section('content')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Questions For <a href="{{route('dashboard.services.edit',$service->id)}}">{{ $service->title }}</a></div>
+    <div class="card-header">الأسئلة الشائعة ل <a href="{{route('dashboard.services.edit',$service->id)}}">{{ $service->title }}</a></div>
 </div>
 <div class="container">
     <div class="row justify-content-center">
@@ -17,10 +17,10 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Question in Arabic</th>
+                        <th>السؤال</th>
                         {{-- <th>Question in English</th> --}}
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,13 +30,13 @@
                         <td>{{ $question->translate('ar')->question }}</td>
                         {{-- <td>{{ $question->translate('en')->question }}</td> --}}
                         <td>
-                            <a href="{{ route('dashboard.services.questions.edit', $question->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>
+                            <a href="{{ route('dashboard.services.questions.edit', $question->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> تعديل</a>
                         </td>
                         <td>
                             <form action="{{ route('dashboard.services.questions.destroy', $question->id) }}" method="post" style="display: inline-block">
                                 @csrf()
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> Delete</button>
+                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> حذف</button>
                             </form><!-- end of form -->
                         </td>
                     </tr>
