@@ -37,7 +37,7 @@ class ServiceIndexItemController extends Controller
         $validatedData = $request->validate($rules);
         $item  = new ServiceIndexItem();
 
-        $item->sub_service_id = $request->sub_service_id;
+        // $item->sub_service_id = $request->sub_service_id;
         $item->translateOrNew('ar')->name = $validatedData['ar']['name'];
         $item->translateOrNew('ar')->description = $validatedData['ar']['description'];
         // $item->translateOrNew('en')->name = $validatedData['en']['name'];
@@ -63,7 +63,7 @@ class ServiceIndexItemController extends Controller
             // 'en.description' => ['required'],
         ];
         $validatedData = $request->validate($rules);
-        $indexitem->sub_service_id = $request->sub_service_id;
+        // $indexitem->sub_service_id = $request->sub_service_id;
         $indexitem->translate('ar')->name = $validatedData['ar']['name'];
         $indexitem->translate('ar')->description = $validatedData['ar']['description'];
         // $indexitem->translate('en')->name = $validatedData['en']['name'];
