@@ -26,10 +26,10 @@
             <table id="categoriesTable" class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="card-block">Position</th>
-                        <th scope="card-block">Name</th>
-                        <th scope="card-block">Showed</th>
-                        <th scope="card-block">Edit</th>
+                        <th scope="card-block">الموقع - Position</th>
+                        <th scope="card-block">الاسم - Name</th>
+                        <th scope="card-block">عرض</th>
+                        <th scope="card-block">تعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,9 +37,9 @@
                     <tr>
                         <td>{{ $workCategory->position }}</td>
                         <td>{{ $workCategory->name }}</td>
-                        <td>{{ $workCategory->showed == 1 ? 'Showed' : 'Hidden' }}</td>
+                        <td>{{ $workCategory->showed == 1 ? 'نعم' : 'مخفي' }}</td>
                         <td>
-                            <a href="{{ route('dashboard.workcategories.edit', $workCategory->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>
+                            <a href="{{ route('dashboard.workcategories.edit', $workCategory->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> تعديل</a>
                         </td>
                     </tr>
                     @endforeach

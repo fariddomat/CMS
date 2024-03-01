@@ -9,7 +9,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Update Image </div>
+    <div class="card-header">تعديل الصورة </div>
 </div>
 <div>
     @include('partials._errors')
@@ -24,21 +24,21 @@
 
 
                 <div class="form-group mb-3">
-                    <label>Name</label>
+                    <label>الاسم</label>
                     <input type="text" name="name" class="form-control " value="{{ old('name', $team->name) }}">
                 </div>
                 <div class="form-group mb-3">
-                    <label>Title</label>
+                    <label>الوصف</label>
                     <input type="text" name="title" class="form-control " value="{{ old('title', $team->title) }}">
                 </div>
                 <div class="form-group mb-3">
-                    <label>Description</label>
+                    <label>التفاصيل</label>
                     <textarea name="description" class="form-control">
                         {{ old('description', $team->description) }}
                     </textarea>
                 </div>
                 <div class="form-group mb-3">
-                    <label>Image</label>
+                    <label>الصورة</label>
                     <input type="file" name="image" class="form-control image">
                 </div>
 
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> تعديل </button>
                 </div>
             </form>
         </div>

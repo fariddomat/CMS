@@ -3,7 +3,7 @@
 @section('worksActive', 'active')
 @section('content')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Works</div>
+    <div class="card-header">العمل</div>
 </div>
 <div class="container">
     <div class="row justify-content-center">
@@ -17,11 +17,11 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Showed</th>
-                        <th>Show At Home</th>
-                        <th>Edit</th>
+                        <th>الاسم</th>
+                        <th>التصنيف</th>
+                        <th>عرض</th>
+                        <th>عرض في الصفحة الرئيسية</th>
+                        <th>تعديل</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +33,7 @@
                         <td>{{ $work->showed == 1 ? 'Showed' : 'Hidden' }}</td>
                         <td>{{ $work->show_at_home == 1 ? 'Showed' : 'Hidden' }}</td>
                         <td>
-                            <a href="{{ route('dashboard.works.edit', $work->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> edit</a>
+                            <a href="{{ route('dashboard.works.edit', $work->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> تعديل</a>
                         </td>
                     </tr>
                     @endforeach

@@ -23,7 +23,7 @@
 @endsection
 @section('content')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <div class="card-header">Order Services</div>
+        <div class="card-header">طلبات الخدمات - Order Services</div>
     </div>
     <div class="container">
         <div class="row justify-content-center">
@@ -32,16 +32,16 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Service</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th>Message</th>
-                            <th>Sent Date</th>
+                            <th>الاسم</th>
+                            <th>الخدمة</th>
+                            <th>البريد الالكتروني</th>
+                            <th>الهاتف</th>
+                            <th>الرسالة</th>
+                            <th>تاريخ الارسال</th>
                             <th>IP</th>
-                            <th>Status</th>
-                            <th>Delete</th>
-                            <th>Note</th>
+                            <th>الحالة</th>
+                            <th>حذف</th>
+                            <th>ملاحظة</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,7 +72,7 @@
                                         {{ csrf_field() }}
                                         {{ method_field('delete') }}
                                         <button type="submit" class="btn btn-danger delete btn-sm"><i
-                                                class="fas fa-trash"></i> Delete</button>
+                                                class="fas fa-trash"></i> حذف</button>
                                     </form><!-- end of form -->
                                 </td>
                                 <td>
@@ -82,7 +82,7 @@
                                         <textarea name="note" class="form-control" id="">{{ $order->note }}</textarea>
 
                                         <button type="submit" class="btn btn-success btn-sm"> <i class="fas fa-save"></i>
-                                            Save</button>
+                                            حفظ</button>
 
                                     </form>
                                 </td>

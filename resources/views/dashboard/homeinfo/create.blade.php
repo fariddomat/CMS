@@ -9,7 +9,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Change Home Info</div>
+    <div class="card-header">تعديل معلومات الصفحة الرئيسية</div>
 </div>
 <div>
     @include('partials._errors')
@@ -21,7 +21,7 @@
             <form action="{{ route('dashboard.homeinfo.store') }}" method="post" enctype="multipart/form-data">
                 @csrf()
                 <div class="form-group mb-3">
-                    <label for="ar[title]" class="form-label">Title in Arabic</label>
+                    <label for="ar[title]" class="form-label">العنوان</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ old('ar.title') ?? isset($info) ? $info->translate('ar')->title : ''  }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -30,7 +30,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[description]" class="form-label">Description in Arabic</label>
+                    <label for="ar[description]" class="form-label">الوصف</label>
                     <input type="text" name="ar[description]" class="form-control" value="{{ old('ar.description') ?? isset($info) ? $info->translate('ar')->description : '' }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -39,7 +39,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[work]" class="form-label">Work in Arabic</label>
+                    <label for="ar[work]" class="form-label">العمل</label>
                     <input type="text" name="ar[work]" class="form-control" value="{{ old('ar.work') ?? isset($info) ? $info->translate('ar')->work : '' }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -48,7 +48,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="ar[work_description]" class="form-label">Work Description in Arabic</label>
+                    <label for="ar[work_description]" class="form-label">العمل</label>
                     <input type="text" name="ar[work_description]" class="form-control" value="{{ old('ar.work_description') ?? isset($info) ? $info->translate('ar')->work_description : '' }}" dir="rtl">
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -58,12 +58,12 @@
 
 
                 <div class="form-group mb-3">
-                    <label>Home Slider</label>
+                    <label>سلايدر الصور - Home Slider</label>
                     <a href="{{ route('dashboard.homeinfoSliderImages.index') }}"  class="btn btn-primary">Slider</a>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label>Logo Image (200 x 200)</label>
+                    <label>صورة ال Logo  (200 x 200)</label>
                     <input type="file" name="logo" class="form-control logo">
                 </div>
 
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <label>About Me Image AR</label>
+                    <label>صورة About Me Image </label>
                     <input type="file" name="about_me_image" class="form-control about-me-image">
                 </div>
 
@@ -81,10 +81,10 @@
                     <img src="{{ isset($info) ? asset($info->about_me_image) : '#' }}" style="width: 300px;" class="img-thumbnail about-me-image-preview" alt="">
                 </div>
 
-                <div class="form-group mb-3">
+                {{-- <div class="form-group mb-3">
                     <label>About Me Image EN</label>
                     <input type="file" name="about_me_image_en" class="form-control about-me-image-en">
-                </div>
+                </div> --}}
 
                 <div class="form-group mb-3">
                     <img src="{{ isset($info) ? asset($info->about_me_image_en) : '#' }}" style="width: 300px;" class="img-thumbnail about-me-image-en-preview" alt="">
@@ -92,7 +92,7 @@
 
 
                 <div class="form-group mb-3">
-                    <label>Service Header Image</label>
+                    <label>صورة قسم الخدمات</label>
                     <input type="file" name="service_image" class="form-control service-image">
                 </div>
 
@@ -102,7 +102,7 @@
 
 
                 <div class="form-group mb-3">
-                    <label>About Header Image</label>
+                    <label>صورة عن الموقع</label>
                     <input type="file" name="about_header_image" class="form-control about-header-image">
                 </div>
 
@@ -113,7 +113,7 @@
 
 
                 <div class="form-group mb-3">
-                    <label>Blog Header Image</label>
+                    <label>صورة غلاف المدونة</label>
                     <input type="file" name="blog_header_image" class="form-control blog-header-image">
                 </div>
 
@@ -123,7 +123,7 @@
 
 
                 <div class="form-group mb-3">
-                    <label>Contact Header Image</label>
+                    <label>صورة قسم اتصل بنا</label>
                     <input type="file" name="contact_header_image" class="form-control contact-header-image">
                 </div>
 
@@ -134,7 +134,7 @@
 
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Change </button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> حفظ </button>
                 </div>
             </form>
         </div>

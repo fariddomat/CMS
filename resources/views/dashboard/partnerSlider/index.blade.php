@@ -17,9 +17,9 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Image</th>
+                        <th>الصورة</th>
                         {{-- <th>Edit</th> --}}
-                        <th>Delete</th>
+                        <th>حذف</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,7 @@
                             <form action="{{ route('dashboard.partnerSlider.destroy', $homeinfoSliderImage) }}" method="post" style="display: inline-block">
                                 @csrf()
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> Delete</button>
+                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> حذف</button>
                             </form><!-- end of form -->
                         </td>
                     </tr>

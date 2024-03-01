@@ -14,7 +14,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Privacy</div>
+    <div class="card-header">سياسة الخصوصية - Privacy</div>
 </div>
 <div>
     @include('partials._errors')
@@ -27,7 +27,7 @@
                 @csrf()
 
                 <div class="form-group mb-3">
-                    <label for="ar" class="form-label">Privacy Me in Arabic</label>
+                    <label for="ar" class="form-label">سياسة الخصوصية</label>
                     <textarea class="form-control" id="ar" name="ar" rows="5" dir="rtl">{{ old('ar') ?? isset($privacy) ? $privacy->ar : '' }}</textarea>
                 </div>
                 {{-- <div class="form-group mb-3">
@@ -35,7 +35,7 @@
                     <textarea class="form-control" id="en" name="en" rows="5">{{ old('en') ?? isset($privacy) ? $privacy->en : '' }}</textarea>
                 </div> --}}
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Save </button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> حفظ </button>
                 </div>
             </form>
         </div>

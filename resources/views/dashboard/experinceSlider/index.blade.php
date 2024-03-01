@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="card-block">
-           <a href="{{ route('dashboard.experinceSlider.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add </a>
+           <a href="{{ route('dashboard.experinceSlider.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> إضافة </a>
        </div>
     </div>
     <div class="row justify-content-center">
@@ -17,9 +17,9 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Image</th>
+                        <th>الصورة</th>
                         {{-- <th>Edit</th> --}}
-                        <th>Delete</th>
+                        <th>حذف</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,7 @@
                             <form action="{{ route('dashboard.experinceSlider.destroy', $homeinfoSliderImage) }}" method="post" style="display: inline-block">
                                 @csrf()
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> Delete</button>
+                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fas fa-trash"></i> حذف</button>
                             </form><!-- end of form -->
                         </td>
                     </tr>

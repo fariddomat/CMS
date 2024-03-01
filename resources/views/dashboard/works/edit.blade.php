@@ -15,7 +15,7 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <div class="card-header">Update Work</div>
+    <div class="card-header">تعديل العمل</div>
 </div>
 <div>
     @include('partials._errors')
@@ -29,7 +29,7 @@
                 {{ method_field('put') }}
 
                 <div class="form-group mb-3">
-                    <label for="ar[title]" class="form-label">Title in Arabic</label>
+                    <label for="ar[title]" class="form-label">العنوان</label>
                     <input type="text" name="ar[title]" class="form-control" value="{{ $work->translate('ar')->title }}"
                         dir="rtl">
                 </div>
@@ -40,12 +40,12 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="slug" class="form-label">Link</label>
+                    <label for="slug" class="form-label">الرابط - Link</label>
                     <input type="text" name="slug" class="form-control" value="{{ $work->slug }}">
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="ar[description]" class="form-label">Description in Arabic</label>
+                    <label for="ar[description]" class="form-label">الوصف</label>
                     <textarea class="form-control" id="ar[description]" name="ar[description]" rows="5"
                         dir="rtl">{{ $work->translate('ar')->description }}</textarea>
                 </div>
@@ -57,7 +57,7 @@
                 </div> --}}
 
                 <div class="form-group mb-3">
-                    <label for="category" class="form-label">Select Category</label>
+                    <label for="category" class="form-label">اختر تصنيف</label>
                     <select class="form-select" name="category" id="category">
                         @foreach($categories as $category)
                         <option value="{{$category->id}}" {{ $work->work_category_id == $category->id ? 'selected' : '' }}>{{$category->name}}</option>
@@ -68,19 +68,19 @@
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" value="1" id="showed" name="showed" {{ $work->showed  == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="showed">
-                      Showed
+                      عرض
                     </label>
                 </div>
 
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" value="1" id="show_at_home" name="show_at_home" {{ $work->show_at_home  == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="show_at_home">
-                      Show at home
+                      عرض في الصفحة الرئيسية
                     </label>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label>Image</label>
+                    <label>الصورة</label>
                     <input type="file" name="image" class="form-control image">
                 </div>
 
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Update </button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> تعديل </button>
                 </div>
             </form>
         </div>
